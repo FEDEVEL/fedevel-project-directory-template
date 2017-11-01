@@ -1,0 +1,2 @@
+This is project main work directory. Keep here the schematic and board files of the project which has not been finished yet or which you are working on.
+Once this board was released, do not change these schematic and board files anymore, but keep notes about any required or future changes in the TODO directory.

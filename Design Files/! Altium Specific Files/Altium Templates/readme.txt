@@ -1,0 +1,1 @@
+Place for Altium templates, e.g for BOMs

@@ -1,0 +1,72 @@
+Follow this procedure before releasing files. Confirm every action with your initials and date.
+IF ANY CHANGES NEEDS TO BE DONE, START THE PROCEDURE FROM BEGINNING!
+
+The procedure needs to be executed in order as defined here. Start from number 1
+--------------------------------------------------------------------------------
+
+
+
+Before you start the releasing procedure, be sure that off-page intersheet references are updated:
+Go to OrCAD, select project, go to Tools-> Annotate, Update entire design, Add Intersheet References, press OK
+
+
+1) Run Schematic DRC
+In OrCAD, select project, then Tools -> Design Rules check. Be sure, that following is selected and checked:
+Design Rules Options: Check entire design, Check Design rules, Run Electrical Rules, Run Physical Rules
+Electrical Rules settings: All checked, except "Check SDT cmpatibility", "Run Custom DRC", "Report all net names", "Report hierarchical ports and off page connectors"
+Physical Rules settings: All checked, except "Check device with zero pins", "Check power ground short", "Run Custom DRC"
+
+I confirm, that I have reviewed Design Rules Check log output and it is ok: 
+YourInitials [DAY-MONTH-YEAR]
+
+2) Generate netlist
+In OrCAD, select project, then Tools -> Create netlist
+
+I confirm, that I have reviewed Create Netlist log output and it is ok: 
+YourInitials [DAY-MONTH-YEAR]
+
+3) Import netlist into PCB
+In Allegro, go to Import -> Netlist, press Import Cadence. Then go back to Import->Netlist and press Viewlog button.
+
+I confirm, that I have reviewed Netlist import log output and it is ok: 
+YourInitials [DAY-MONTH-YEAR]
+
+4) Impedance
+I confirm, I have updated and checked track width/gap to match required impedance (e.g 55 OHMs): 
+YourInitials [DAY-MONTH-YEAR]
+
+5) Update silkscreen
+In Allegro, go to Manufacture -> Silkscreen. Be sure, that following is set:
+Layer: Both; Elements: Both; 
+Silk: Board geometry, Package geometry, Reference designator; Set others to None;
+Checked: All Rotation, Detailed text checking, clear solder mask pad; Set others to Uncheck
+Set 0.1mm for: Displacement increment, Minimum line length, Element to pad clearance
+Maximum displacement: 15mm (can be incresed if needed)
+
+I confirm, that I have reviewed Autosilk TOP and Autosilk BOTTOM layers and they are ok: 
+YourInitials [DAY-MONTH-YEAR]
+
+6) Generate Assembly Drawing layers for variants
+Select ASM TOP color file view build from: BrdGeo & PkgGeo & RefDes / Assembly_Top; BrdGeo/Design_Outline. Open Export -> Variants -> Create Assembly Drawing.
+Select Top Side & Use Assembly Data. Run this for every Variant in the design.
+Select ASM BOTTOM color file view build from: BrdGeo & PkgGeo & RefDes / Assembly_Bottom; BrdGeo/Design_Outline. Open Export -> Variants -> Create Assembly Drawing.
+Select Bottom Side & Use Assembly Data. Run this for every Variant in the design.
+Now run "add_layer_name" script. Be sure correct Variant layers are selected in the TOP and BOTTOM lists. Then check the Assembly Drawing layers.
+
+I confirm, that I have reviewed Assembly Top & Bottom layers for every variant and they are all ok: 
+YourInitials [DAY-MONTH-YEAR]
+
+7) Run DRC Check
+Go to: Constraint Manager -> Analyze -> Analysis mode and be sure ALL RULES in all categories are "ON".
+Go to: Check -> Check design status, press Update DRC. Be sure all DRCs are green. Waived DRC errors do not have to be green, but be sure you check them!
+
+I confirm, that everything in the DRC status panel is green. If Waived DRCs are not green, I confirm, that I have checked them one-by-one: 
+YourInitials [DAY-MONTH-YEAR]
+
+8) Gerber check
+I confirm, that I have copied and visually checked gerber files placed in "\Step 1 - PCB Manufacturing\Gerber Output\"
+YourInitials [DAY-MONTH-YEAR]
+
+9) Other files
+I confirm, that I have copied and checked files placed in other subdirectories:
+YourInitials [DAY-MONTH-YEAR]

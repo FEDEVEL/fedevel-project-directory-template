@@ -1,0 +1,1 @@
+Create a directory with Board name and copy there all the files from manufacturer.

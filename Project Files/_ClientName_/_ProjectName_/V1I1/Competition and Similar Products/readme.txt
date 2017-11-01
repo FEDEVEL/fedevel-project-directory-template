@@ -1,0 +1,1 @@
+Create a directory with Competition Company name and place all documents about their similar produtcs there.
