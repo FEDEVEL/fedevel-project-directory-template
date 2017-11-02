@@ -6,9 +6,13 @@ The procedure needs to be executed in order as defined here. Start from number 1
 
 
 
-Before you start the releasing procedure, be sure that off-page intersheet references are updated:
+Before you start the releasing procedure, be sure:
+
+A) That off-page intersheet references are updated:
 Go to OrCAD, select project, go to Tools-> Annotate, Update entire design, Add Intersheet References, press OK
 
+B) Variants file for Allegro is updated:
+In OrCAD, select project, then Tools -> Part Manager -> Open. Go to: Tools -> Export Variant List. Remove "\allegro" from Output file PATH, press Export button.
 
 1) Run Schematic DRC
 In OrCAD, select project, then Tools -> Design Rules check. Be sure, that following is selected and checked:
