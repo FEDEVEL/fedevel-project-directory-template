@@ -1,5 +1,5 @@
 ### FEDEVEL Directory Structure
-This project contains directory structure which we use at FEDEVEL for projects.
+This project contains directory structure which we use at FEDEVEL for projects, however, feel free to use it in your company or for your own projects. You can always find the most recent version of this structure at https://github.com/FEDEVEL/fedevel-project-directory-template
 
 ### How to use it
 Each directory and subdirectory has a readme.txt file with detailed explanation about what files should be placed there.
